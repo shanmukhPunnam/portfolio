@@ -1,9 +1,9 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Play, Filter } from "lucide-react";
+import GameModal from './GameModal';
 
 const games = [
   {
@@ -97,12 +97,24 @@ const categories = ["All", "RPG", "Action", "Puzzle", "Racing", "VR", "Mobile"];
 const GameShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [showFeatured, setShowFeatured] = useState(false);
+  const [selectedGame, setSelectedGame] = useState<typeof games[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredGames = games.filter(game => {
     const categoryMatch = selectedCategory === "All" || game.category === selectedCategory;
     const featuredMatch = !showFeatured || game.featured;
     return categoryMatch && featuredMatch;
   });
+
+  const handleGameClick = (game: typeof games[0]) => {
+    setSelectedGame(game);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedGame(null);
+  };
 
   return (
     <section className="py-20 bg-slate-50">
@@ -156,7 +168,11 @@ const GameShowcase = () => {
         {/* Games Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredGames.map(game => (
-            <Card key={game.id} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg overflow-hidden">
+            <Card 
+              key={game.id} 
+              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg overflow-hidden cursor-pointer"
+              onClick={() => handleGameClick(game)}
+            >
               <div className="relative overflow-hidden">
                 <img 
                   src={game.image} 
@@ -169,6 +185,11 @@ const GameShowcase = () => {
                   </Badge>
                 )}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Button className="bg-white/90 text-slate-900 hover:bg-white">
+                    View Details
+                  </Button>
+                </div>
               </div>
               
               <CardHeader>
@@ -199,7 +220,7 @@ const GameShowcase = () => {
                   </div>
                 </div>
                 
-                <div className="flex gap-2">
+                <div className="flex gap-2" onClick={(e) => e.stopPropagation()}>
                   <Button size="sm" className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
                     <Play className="h-4 w-4 mr-1" />
                     Demo
@@ -221,6 +242,12 @@ const GameShowcase = () => {
             <p className="text-gray-500 text-lg">No games found for the selected filters.</p>
           </div>
         )}
+
+        <GameModal 
+          game={selectedGame} 
+          isOpen={isModalOpen} 
+          onClose={handleCloseModal} 
+        />
       </div>
     </section>
   );
