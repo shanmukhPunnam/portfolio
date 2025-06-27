@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import GameShowcase from '@/components/GameShowcase';
 import Skills from '@/components/Skills';
@@ -10,6 +11,7 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Navbar />
       <section id="home">
         <Hero />
       </section>
