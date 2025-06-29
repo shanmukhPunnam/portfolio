@@ -21,8 +21,22 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        {/* Profile Picture */}
+        <div className="mb-8 flex justify-center animate-fade-in">
+          <div className="relative">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 p-1 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400">
+              <img 
+                src="/lovable-uploads/6da09970-af62-4896-a766-e3213dca4258.png" 
+                alt="Unity Game Developer" 
+                className="w-full h-full object-cover rounded-full bg-white"
+              />
+            </div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 rounded-full opacity-30 blur animate-pulse"></div>
+          </div>
+        </div>
+
         <div className="mb-6">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
             Unity Game
             <span className="block bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
               Developer
