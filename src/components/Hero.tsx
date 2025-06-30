@@ -60,16 +60,16 @@ const Hero = () => {
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-2">5+</div>
+            <div className="text-3xl font-bold text-white mb-2">6+</div>
             <div className="text-gray-400">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-2">20+</div>
-            <div className="text-gray-400">Games Published</div>
+            <div className="text-3xl font-bold text-white mb-2">15+</div>
+            <div className="text-gray-400">Projects Delivered</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-2">1M+</div>
-            <div className="text-gray-400">Downloads</div>
+            <div className="text-3xl font-bold text-white mb-2">15+</div>
+            <div className="text-gray-400">Team Members Led</div>
           </div>
         </div>
       </div>
