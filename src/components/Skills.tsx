@@ -81,7 +81,7 @@ const Skills = () => {
                 {category.title}
               </h3>
               
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {category.skills.map((skill, skillIndex) => (
                   <Card 
                     key={skillIndex} 
