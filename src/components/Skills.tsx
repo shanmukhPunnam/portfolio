@@ -1,141 +1,105 @@
 
 import React from 'react';
-import { Progress } from "@/components/ui/progress";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Gamepad2, Palette, Database, Zap, Users } from "lucide-react";
+import { Code, Gamepad2, Smartphone, Monitor, Wrench, Globe, Shield, Cpu, Database, GitBranch, Mic, Coins, Bot, Palette, Languages, Settings, Package, Target, Headphones, Zap, Puzzle, TestTube } from "lucide-react";
 
 const Skills = () => {
-  const technicalSkills = [
-    { name: "Unity 3D/2D", level: 95, icon: "🎮" },
-    { name: "C# Programming", level: 90, icon: "💻" },
-    { name: "Game Design", level: 85, icon: "🎨" },
-    { name: "3D Modeling", level: 75, icon: "🧊" },
-    { name: "Shader Programming", level: 80, icon: "✨" },
-    { name: "Mobile Development", level: 85, icon: "📱" },
-    { name: "VR/AR Development", level: 70, icon: "🥽" },
-    { name: "Multiplayer/Networking", level: 75, icon: "🌐" }
-  ];
-
-  const tools = [
-    { name: "Unity", category: "Game Engine" },
-    { name: "Visual Studio", category: "IDE" },
-    { name: "Blender", category: "3D Modeling" },
-    { name: "Photoshop", category: "Graphics" },
-    { name: "Git", category: "Version Control" },
-    { name: "Firebase", category: "Backend" },
-    { name: "Photon", category: "Networking" },
-    { name: "Addressables", category: "Asset Management" }
-  ];
-
-  const specializations = [
+  const skillCategories = [
     {
-      icon: <Code className="h-8 w-8 text-purple-600" />,
-      title: "Game Programming",
-      description: "Expert in C# and Unity scripting, gameplay mechanics, and system architecture"
+      title: "Core Development Skills",
+      skills: [
+        { name: "Unity3D", icon: <Package className="h-6 w-6" /> },
+        { name: "Unreal", icon: <Gamepad2 className="h-6 w-6" /> },
+        { name: "C#", icon: <Code className="h-6 w-6" /> },
+        { name: "Multiplayer", icon: <Globe className="h-6 w-6" /> },
+        { name: "Shaders", icon: <Zap className="h-6 w-6" /> },
+        { name: "Particles", icon: <Target className="h-6 w-6" /> },
+        { name: "Optimization", icon: <Cpu className="h-6 w-6" /> },
+        { name: "AI Agents", icon: <Bot className="h-6 w-6" /> },
+        { name: "UI/UX", icon: <Palette className="h-6 w-6" /> },
+        { name: "Localization", icon: <Languages className="h-6 w-6" /> },
+        { name: "Editor Tools", icon: <Settings className="h-6 w-6" /> },
+        { name: "Scriptables", icon: <Code className="h-6 w-6" /> },
+        { name: "Addressables", icon: <Package className="h-6 w-6" /> }
+      ]
     },
     {
-      icon: <Gamepad2 className="h-8 w-8 text-blue-600" />,
-      title: "Game Design",
-      description: "Creating engaging gameplay experiences with balanced mechanics and user flow"
+      title: "Tools & Services",
+      skills: [
+        { name: "Photon", icon: <Globe className="h-6 w-6" /> },
+        { name: "Firebase", icon: <Database className="h-6 w-6" /> },
+        { name: "Unity Services", icon: <Wrench className="h-6 w-6" /> },
+        { name: "Git", icon: <GitBranch className="h-6 w-6" /> },
+        { name: "Voice Chat", icon: <Mic className="h-6 w-6" /> },
+        { name: "LiveOps", icon: <Shield className="h-6 w-6" /> },
+        { name: "Crypto", icon: <Coins className="h-6 w-6" /> },
+        { name: "NFT", icon: <Coins className="h-6 w-6" /> }
+      ]
     },
     {
-      icon: <Palette className="h-8 w-8 text-green-600" />,
-      title: "Visual Effects",
-      description: "Shader programming, particle systems, and stunning visual effects"
+      title: "Target Platforms",
+      skills: [
+        { name: "Android", icon: <Smartphone className="h-6 w-6" /> },
+        { name: "iOS", icon: <Smartphone className="h-6 w-6" /> },
+        { name: "WebGL", icon: <Globe className="h-6 w-6" /> },
+        { name: "PC", icon: <Monitor className="h-6 w-6" /> },
+        { name: "AR", icon: <Target className="h-6 w-6" /> },
+        { name: "VR", icon: <Headphones className="h-6 w-6" /> }
+      ]
     },
     {
-      icon: <Database className="h-8 w-8 text-orange-600" />,
-      title: "Performance Optimization",
-      description: "Memory management, frame rate optimization, and efficient asset handling"
-    },
-    {
-      icon: <Zap className="h-8 w-8 text-yellow-600" />,
-      title: "Cross-Platform",
-      description: "Deploying games across PC, mobile, console, and VR platforms"
-    },
-    {
-      icon: <Users className="h-8 w-8 text-pink-600" />,
-      title: "Team Collaboration",
-      description: "Working with artists, designers, and other developers in agile environments"
+      title: "Project Types",
+      skills: [
+        { name: "Shooter", icon: <Target className="h-6 w-6" /> },
+        { name: "VR Sim", icon: <Headphones className="h-6 w-6" /> },
+        { name: "Editor Tool", icon: <Settings className="h-6 w-6" /> },
+        { name: "Casual Game", icon: <Gamepad2 className="h-6 w-6" /> },
+        { name: "AI Combat", icon: <Bot className="h-6 w-6" /> },
+        { name: "Puzzle Gen", icon: <Puzzle className="h-6 w-6" /> },
+        { name: "Perf Test", icon: <TestTube className="h-6 w-6" /> },
+        { name: "Simulator", icon: <Monitor className="h-6 w-6" /> }
+      ]
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Skills & Expertise
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Core Components & Skills
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            A comprehensive toolkit for creating exceptional gaming experiences
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Comprehensive expertise across game development technologies and platforms
           </p>
         </div>
 
-        {/* Specializations */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {specializations.map((spec, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 p-3 rounded-full bg-gray-50 w-fit">
-                  {spec.icon}
-                </div>
-                <CardTitle className="text-xl font-semibold text-slate-900">
-                  {spec.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center">
-                  {spec.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Technical Skills */}
-          <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">
-              Technical Proficiency
-            </h3>
-            <div className="space-y-6">
-              {technicalSkills.map((skill, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">{skill.icon}</span>
-                      <span className="font-semibold text-slate-900">{skill.name}</span>
-                    </div>
-                    <span className="text-sm font-medium text-gray-600">{skill.level}%</span>
-                  </div>
-                  <Progress 
-                    value={skill.level} 
-                    className="h-3 bg-gray-200"
-                  />
-                </div>
-              ))}
+          {skillCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="space-y-6">
+              <h3 className="text-2xl font-bold text-white text-center mb-8 border-b border-gray-700 pb-4">
+                {category.title}
+              </h3>
+              
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {category.skills.map((skill, skillIndex) => (
+                  <Card 
+                    key={skillIndex} 
+                    className="bg-slate-800/50 border-slate-700 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 backdrop-blur-sm"
+                  >
+                    <CardContent className="p-4 flex flex-col items-center text-center space-y-3">
+                      <div className="text-purple-400 hover:text-purple-300 transition-colors">
+                        {skill.icon}
+                      </div>
+                      <span className="text-gray-100 font-medium text-sm">
+                        {skill.name}
+                      </span>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
-          </div>
-
-          {/* Tools & Technologies */}
-          <div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">
-              Tools & Technologies
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {tools.map((tool, index) => (
-                <Card key={index} className="hover:shadow-md transition-all duration-300 hover:-translate-y-1 border-0 shadow-sm">
-                  <CardContent className="p-4">
-                    <div className="text-center">
-                      <h4 className="font-semibold text-slate-900 mb-1">{tool.name}</h4>
-                      <p className="text-sm text-gray-600">{tool.category}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
