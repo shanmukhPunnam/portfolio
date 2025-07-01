@@ -1,4 +1,3 @@
-
 export interface Game {
   id: number;
   title: string;
@@ -11,6 +10,7 @@ export interface Game {
     demo: string;
     github: string;
     store: string;
+    youtube?: string;
   };
   featured: boolean;
   developmentTime: string;
@@ -33,7 +33,8 @@ export const games: Game[] = [
     links: {
       demo: "#",
       github: "#",
-      store: "#"
+      store: "#",
+      youtube: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     },
     featured: true,
     developmentTime: "8 months",
@@ -51,7 +52,9 @@ export const games: Game[] = [
     screenshots: [
       "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop",
       "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=600&h=400&fit=crop"
+      "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
     ]
   },
   {
