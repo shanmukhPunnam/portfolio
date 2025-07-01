@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -42,7 +41,11 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-2xl font-bold text-slate-900 hover:text-purple-600 transition-colors"
+              className={`text-2xl font-bold transition-colors ${
+                isScrolled
+                  ? "text-slate-900 hover:text-purple-600"
+                  : "text-white hover:text-purple-300"
+              }`}
             >
               GameDev
             </button>
@@ -55,7 +58,11 @@ const Navbar = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-slate-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+                  className={`px-3 py-2 text-sm font-medium transition-colors ${
+                    isScrolled
+                      ? "text-slate-700 hover:text-purple-600"
+                      : "text-white hover:text-purple-300"
+                  }`}
                 >
                   {item.label}
                 </button>
@@ -69,7 +76,11 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-slate-700 hover:text-purple-600"
+              className={`transition-colors ${
+                isScrolled
+                  ? "text-slate-700 hover:text-purple-600"
+                  : "text-white hover:text-purple-300"
+              }`}
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -83,12 +94,21 @@ const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm shadow-lg rounded-lg mt-2">
+            <div className={`px-2 pt-2 pb-3 space-y-1 rounded-lg mt-2
+              ${isScrolled
+                ? "bg-white/95 backdrop-blur-sm shadow-lg"
+                : "bg-black/80 backdrop-blur-sm shadow-lg"
+              }
+            `}>
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-slate-700 hover:text-purple-600 block px-3 py-2 text-base font-medium w-full text-left transition-colors"
+                  className={`block px-3 py-2 text-base font-medium w-full text-left transition-colors ${
+                    isScrolled
+                      ? "text-slate-700 hover:text-purple-600"
+                      : "text-white hover:text-purple-300"
+                  }`}
                 >
                   {item.label}
                 </button>
