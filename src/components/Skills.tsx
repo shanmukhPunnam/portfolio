@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import ScrollAnimationWrapper from './ScrollAnimationWrapper';
 import { Code, Gamepad2, Smartphone, Monitor, Wrench, Globe, Shield, Cpu, Database, GitBranch, Mic, Coins, Bot, Palette, Languages, Settings, Package, Target, Headphones, Zap, Puzzle, TestTube } from "lucide-react";
 
 const Skills = () => {
@@ -65,40 +66,51 @@ const Skills = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Core Components & Skills
-          </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Comprehensive expertise across game development technologies and platforms
-          </p>
-        </div>
+        <ScrollAnimationWrapper animation="fadeUp">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Core Components & Skills
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive expertise across game development technologies and platforms
+            </p>
+          </div>
+        </ScrollAnimationWrapper>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="space-y-6">
-              <h3 className="text-2xl font-bold text-white text-center mb-8 border-b border-gray-700 pb-4">
-                {category.title}
-              </h3>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <Card 
-                    key={skillIndex} 
-                    className="bg-slate-800/50 border-slate-700 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 backdrop-blur-sm"
-                  >
-                    <CardContent className="p-4 flex flex-col items-center text-center space-y-3">
-                      <div className="text-purple-400 hover:text-purple-300 transition-colors">
-                        {skill.icon}
-                      </div>
-                      <span className="text-gray-100 font-medium text-sm">
-                        {skill.name}
-                      </span>
-                    </CardContent>
-                  </Card>
-                ))}
+            <ScrollAnimationWrapper
+              key={categoryIndex}
+              animation={categoryIndex % 2 === 0 ? "slideLeft" : "slideRight"}
+              delay={0.1 * categoryIndex}
+            >
+              <div className="space-y-6">
+                <h3 className="text-2xl font-bold text-white text-center mb-8 border-b border-gray-700 pb-4">
+                  {category.title}
+                </h3>
+                
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {category.skills.map((skill, skillIndex) => (
+                    <ScrollAnimationWrapper
+                      key={skillIndex}
+                      animation="scale"
+                      delay={0.05 * skillIndex + 0.2 * categoryIndex}
+                    >
+                      <Card className="bg-slate-800/50 border-slate-700 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 backdrop-blur-sm">
+                        <CardContent className="p-4 flex flex-col items-center text-center space-y-3">
+                          <div className="text-purple-400 hover:text-purple-300 transition-colors">
+                            {skill.icon}
+                          </div>
+                          <span className="text-gray-100 font-medium text-sm">
+                            {skill.name}
+                          </span>
+                        </CardContent>
+                      </Card>
+                    </ScrollAnimationWrapper>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollAnimationWrapper>
           ))}
         </div>
       </div>
