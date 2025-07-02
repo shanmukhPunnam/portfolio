@@ -24,7 +24,7 @@ const YouTubeVideo = ({ videoUrl }: YouTubeVideoProps) => {
     return null;
   }
 
-  const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}`;
 
   return (
     <div>
