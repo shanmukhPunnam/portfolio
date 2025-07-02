@@ -27,7 +27,7 @@ export const games: Game[] = [
   title: "Poker VR",
   description: "Multiplayer VR poker game with realistic physics and hand tracking.",
   longDescription: "Step into a virtual casino and experience real-time multiplayer poker with fully immersive hand-tracked gestures, avatar interactions, and lifelike physics. Built for Oculus Quest, Poker VR delivers the feel of live poker from the comfort of your home. Developed core gameplay, multiplayer logic, realistic physics, and gesture-based interactions as part of the VR team.",
-  image: "public/assets/Images/Projects/PokerVR/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/PokerVR/ProjectIcon.jpg",
   category: "VR",
   technologies: ["Unity 3D", "C#", "Oculus SDK", "Photon"],
   links: {
@@ -58,7 +58,7 @@ export const games: Game[] = [
   title: "Zombie Fever",
   description: "Shoot, survive, and escape the zombie apocalypse!",
   longDescription: "Step into a post-apocalyptic world overrun by the undead. Armed with powerful weapons and quick reflexes, fight your way through zombie-infested streets to reach the last research center. Survive intense shootouts, use power-ups, rescue hostages, and stay alive in King of the Hill or Horde modes. Shoot, run, and survive—this is humanity's last stand. As the sole Unity developer, I spearheaded the entire game lifecycle, implemented core systems, optimized performance for Android, and managed Play Store release and updates.",
-  image: "public/assets/Images/Projects/ZombieFever/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/ZombieFever/ProjectIcon.jpg",
   category: "Shooter",
   technologies: ["Unity 3D", "C#", "Scriptable Objects", "Google Play Services"],
   links: {
@@ -81,12 +81,12 @@ export const games: Game[] = [
     "Google Play publishing and compliance"
   ],
   screenshots: [
-    "public/assets/Images/Projects/ZombieFever/Screenshot_1.jpg",
-    "public/assets/Images/Projects/ZombieFever/Screenshot_2.jpg",
-    "public/assets/Images/Projects/ZombieFever/Screenshot_3.jpg", 
-    "public/assets/Images/Projects/ZombieFever/Screenshot_4.jpg",
-    "public/assets/Images/Projects/ZombieFever/Screenshot_5.jpg",
-    "public/assets/Images/Projects/ZombieFever/Screenshot_6.jpg"
+    "/assets/Images/Projects/ZombieFever/Screenshot_1.jpg",
+    "/assets/Images/Projects/ZombieFever/Screenshot_2.jpg",
+    "/assets/Images/Projects/ZombieFever/Screenshot_3.jpg", 
+    "/assets/Images/Projects/ZombieFever/Screenshot_4.jpg",
+    "/assets/Images/Projects/ZombieFever/Screenshot_5.jpg",
+    "/assets/Images/Projects/ZombieFever/Screenshot_6.jpg"
   ]
 }
 ,
@@ -95,7 +95,7 @@ export const games: Game[] = [
   title: "War Ground",
   description: "Offline third-person shooting game with dynamic combat.",
   longDescription: "Fast-paced TPS shooter with weapon inventory, missions, smart AI, and offline gameplay. Unlock guns, complete objectives, and fight enemy forces across challenging battlegrounds with responsive mobile controls and stunning visuals. As the sole developer, I built the entire game, including combat systems, inventory logic, AI, in-app purchases, rewarded ads, and publishing pipeline, all optimized for low to mid-range Android devices.",
-  image: "public/assets/Images/Projects/WarGround/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/WarGround/ProjectIcon.jpg",
   category: "Shooter",
   technologies: ["Unity 3D", "C#", "Scriptable Objects", "Google Play Billing"],
   links: {
@@ -118,13 +118,13 @@ export const games: Game[] = [
     "Optimized for low to mid-range Android devices"
   ],
   screenshots: [
-    "public/assets/Images/Projects/WarGround/Screenshot_1.jpg",
-    "public/assets/Images/Projects/WarGround/Screenshot_2.jpg",
-    "public/assets/Images/Projects/WarGround/Screenshot_3.jpg", 
-    "public/assets/Images/Projects/WarGround/Screenshot_4.jpg",
-    "public/assets/Images/Projects/WarGround/Screenshot_5.jpg",
-    "public/assets/Images/Projects/WarGround/Screenshot_6.jpg",
-    "public/assets/Images/Projects/WarGround/Screenshot_7.jpg"
+    "/assets/Images/Projects/WarGround/Screenshot_1.jpg",
+    "/assets/Images/Projects/WarGround/Screenshot_2.jpg",
+    "/assets/Images/Projects/WarGround/Screenshot_3.jpg", 
+    "/assets/Images/Projects/WarGround/Screenshot_4.jpg",
+    "/assets/Images/Projects/WarGround/Screenshot_5.jpg",
+    "/assets/Images/Projects/WarGround/Screenshot_6.jpg",
+    "/assets/Images/Projects/WarGround/Screenshot_7.jpg"
   ]
 }
 ,
@@ -133,7 +133,7 @@ export const games: Game[] = [
   title: "Word Coach",
   description: "Relaxing crossword word puzzle game with 6,000+ levels.",
   longDescription: "Swipe, solve, and sharpen your vocabulary with 6,000+ crossword puzzles. Enjoy a relaxing and immersive word journey across beautifully designed worlds filled with daily challenges, brain boosters, and vocabulary training. As the sole Unity developer, I implemented modular crossword and word-connect logic, adaptive level systems, hint mechanics, engaging visuals, and managed deployment and updates.",
-  image: "public/assets/Images/Projects/WordCoach/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/WordCoach/ProjectIcon.jpg",
   category: "Puzzle",
   technologies: ["Unity 3D", "C#", "Scriptable Objects"],
   links: {
@@ -156,14 +156,14 @@ export const games: Game[] = [
     "Optimized for offline and low-end devices"
   ],
   screenshots: [
-    "public/assets/Images/Projects/WordCoach/Screenshot_1.jpg",
-    "public/assets/Images/Projects/WordCoach/Screenshot_2.jpg",
-    "public/assets/Images/Projects/WordCoach/Screenshot_3.jpg", 
-    "public/assets/Images/Projects/WordCoach/Screenshot_4.jpg",
-    "public/assets/Images/Projects/WordCoach/Screenshot_5.jpg",
-    "public/assets/Images/Projects/WordCoach/Screenshot_6.jpg",
-    "public/assets/Images/Projects/WordCoach/Screenshot_7.jpg",
-    "public/assets/Images/Projects/WordCoach/Screenshot_8.jpg"
+    "/assets/Images/Projects/WordCoach/Screenshot_1.jpg",
+    "/assets/Images/Projects/WordCoach/Screenshot_2.jpg",
+    "/assets/Images/Projects/WordCoach/Screenshot_3.jpg", 
+    "/assets/Images/Projects/WordCoach/Screenshot_4.jpg",
+    "/assets/Images/Projects/WordCoach/Screenshot_5.jpg",
+    "/assets/Images/Projects/WordCoach/Screenshot_6.jpg",
+    "/assets/Images/Projects/WordCoach/Screenshot_7.jpg",
+    "/assets/Images/Projects/WordCoach/Screenshot_8.jpg"
   ]
 }
 ,
@@ -172,7 +172,7 @@ export const games: Game[] = [
   title: "World of Rabin",
   description: "A logical 2D platformer with minimalist puzzle design.",
   longDescription: "Navigate a mystical realm filled with logical platforming challenges. Help two friends escape from the depths of Rabin by solving increasingly complex puzzles across beautifully crafted stages. As the sole Unity 2D developer, I handled every aspect including game architecture, core mechanics, level design, minimal UI/UX, visuals, sound, optimization, and deployment to Play Store.",
-  image: "public/assets/Images/Projects/WorldOfRabin/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/WorldOfRabin/ProjectIcon.jpg",
   category: "Platformer",
   technologies: ["Unity 2D", "C#", "Custom Level Templates"],
   links: {
@@ -195,12 +195,12 @@ export const games: Game[] = [
     "Optimized for smooth mobile performance"
   ],
   screenshots: [
-    "public/assets/Images/Projects/WorldOfRabin/Screenshot_1.jpg",
-    "public/assets/Images/Projects/WorldOfRabin/Screenshot_2.jpg",
-    "public/assets/Images/Projects/WorldOfRabin/Screenshot_3.jpg", 
-    "public/assets/Images/Projects/WorldOfRabin/Screenshot_4.jpg",
-    "public/assets/Images/Projects/WorldOfRabin/Screenshot_5.jpg",
-    "public/assets/Images/Projects/WorldOfRabin/Screenshot_6.jpg"
+    "/assets/Images/Projects/WorldOfRabin/Screenshot_1.jpg",
+    "/assets/Images/Projects/WorldOfRabin/Screenshot_2.jpg",
+    "/assets/Images/Projects/WorldOfRabin/Screenshot_3.jpg", 
+    "/assets/Images/Projects/WorldOfRabin/Screenshot_4.jpg",
+    "/assets/Images/Projects/WorldOfRabin/Screenshot_5.jpg",
+    "/assets/Images/Projects/WorldOfRabin/Screenshot_6.jpg"
   ]
 }
 ,
@@ -209,7 +209,7 @@ export const games: Game[] = [
   title: "Roulette Wheel VR",
   description: "Multiplayer roulette game with gesture-based betting in VR.",
   longDescription: "Experience the thrill of live roulette in virtual reality. Place your bets with intuitive hand gestures, interact with a lifelike wheel, and enjoy multiplayer casino realism with voice chat, animated avatars, and physics-based chips—all in an immersive VR space. Developed core VR gameplay, hand-tracked betting gestures, multiplayer logic, and optimized for Oculus Quest performance.",
-  image: "public/assets/Images/Projects/RouletteWheelVR/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/RouletteWheelVR/ProjectIcon.jpg",
   category: "VR Casino",
   technologies: ["Unity 3D", "C#", "Oculus SDK", "Photon"],
   links: {
@@ -239,7 +239,7 @@ export const games: Game[] = [
   title: "Alpha Returns",
   description: "Web3 multiplayer PvP shooter with tokenized assets and crypto rewards.",
   longDescription: "Alpha Returns is a cutting-edge multiplayer PvP shooter that blends traditional FPS action with a full Web3 NFT economy. Built in Unity, it features scalable multiplayer with Photon, blockchain-backed inventory and NFT asset rewards, real-time analytics, hybrid economy (IAP + tokens), and high-end mobile optimization. As Lead Unity Developer, I architected the project, implemented gameplay, Web3 systems, technical standards, and led a cross-functional team from prototype to release.",
-  image: "public/assets/Images/Projects/AlphaReturns/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/AlphaReturns/ProjectIcon.jpg",
   category: "Shooter / Web3",
   technologies: ["Unity 3D", "C#", "Photon", "Web3", "Firebase", "NFT"],
   links: {
@@ -262,25 +262,25 @@ export const games: Game[] = [
     "Real-time matchmaking, live events, and competitive leaderboards"
   ],
   screenshots: [
-    "public/assets/Images/Projects/AlphaReturns/Environment_Selection.jpeg",
-    "public/assets/Images/Projects/AlphaReturns/First_person.png",
-    "public/assets/Images/Projects/AlphaReturns/iap.jpeg",
-    "public/assets/Images/Projects/AlphaReturns/main_menu_2.jpeg",
-    "public/assets/Images/Projects/AlphaReturns/main_menu.jpeg",
-    "public/assets/Images/Projects/AlphaReturns/missions.jpeg",
-    "public/assets/Images/Projects/AlphaReturns/multiple_Environments.jpg",
-    "public/assets/Images/Projects/AlphaReturns/shop.jpeg",
-    "public/assets/Images/Projects/AlphaReturns/Spin_Wheel.png",
-    "public/assets/Images/Projects/AlphaReturns/third_person.png",
-    "public/assets/Images/Projects/AlphaReturns/weapon_selection.jpeg",
-    "public/assets/Images/Projects/AlphaReturns/Weapons_Showcase.webp.png"
+    "/assets/Images/Projects/AlphaReturns/Environment_Selection.jpeg",
+    "/assets/Images/Projects/AlphaReturns/First_person.png",
+    "/assets/Images/Projects/AlphaReturns/iap.jpeg",
+    "/assets/Images/Projects/AlphaReturns/main_menu_2.jpeg",
+    "/assets/Images/Projects/AlphaReturns/main_menu.jpeg",
+    "/assets/Images/Projects/AlphaReturns/missions.jpeg",
+    "/assets/Images/Projects/AlphaReturns/multiple_Environments.jpg",
+    "/assets/Images/Projects/AlphaReturns/shop.jpeg",
+    "/assets/Images/Projects/AlphaReturns/Spin_Wheel.png",
+    "/assets/Images/Projects/AlphaReturns/third_person.png",
+    "/assets/Images/Projects/AlphaReturns/weapon_selection.jpeg",
+    "/assets/Images/Projects/AlphaReturns/Weapons_Showcase.webp.png"
   ]
 },{
   id: 8,
   title: "Arrow Twist",
   description: "Arcade reflex game with rotating targets and precision shooting.",
   longDescription: "Shoot arrows into spinning logs without hitting obstacles. Time your shots, dodge spikes, slash apples, and face off against bosses every few levels. Unlock special bows and arrows while testing your reflexes in this high-speed tap game. Built as a solo developer, I designed dynamic rotation mechanics, progression, monetization, and polished the game for responsive, satisfying play.",
-  image: "public/assets/Images/Projects/ArrowTwist/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/ArrowTwist/ProjectIcon.jpg",
   category: "Arcade",
   technologies: ["Unity 3D", "C#", "Scriptable Objects", "Unity Ads"],
   links: {
@@ -303,14 +303,14 @@ export const games: Game[] = [
     "One-handed portrait play and mobile optimization"
   ],
   screenshots: [
-    "public/assets/Images/Projects/ArrowTwist/Screenshot_1.png",
-    "public/assets/Images/Projects/ArrowTwist/Screenshot_2.png",
-    "public/assets/Images/Projects/ArrowTwist/Screenshot_3.png",
-    "public/assets/Images/Projects/ArrowTwist/Screenshot_4.png",
-    "public/assets/Images/Projects/ArrowTwist/Screenshot_5.png",
-    "public/assets/Images/Projects/ArrowTwist/Screenshot_6.png",
-    "public/assets/Images/Projects/ArrowTwist/Screenshot_7.png",
-    "public/assets/Images/Projects/ArrowTwist/Screenshot_8.png"
+    "/assets/Images/Projects/ArrowTwist/Screenshot_1.png",
+    "/assets/Images/Projects/ArrowTwist/Screenshot_2.png",
+    "/assets/Images/Projects/ArrowTwist/Screenshot_3.png",
+    "/assets/Images/Projects/ArrowTwist/Screenshot_4.png",
+    "/assets/Images/Projects/ArrowTwist/Screenshot_5.png",
+    "/assets/Images/Projects/ArrowTwist/Screenshot_6.png",
+    "/assets/Images/Projects/ArrowTwist/Screenshot_7.png",
+    "/assets/Images/Projects/ArrowTwist/Screenshot_8.png"
   ]
 },
 {
@@ -318,7 +318,7 @@ export const games: Game[] = [
   title: "Car Drift Racing",
   description: "Realistic mobile drift racing with fine-tuned car physics.",
   longDescription: "Master the art of drifting in this fast-paced mobile racer. Perform smooth drifts, unlock high-performance cars, and race across visually diverse tracks. Designed and built for precise handling, rewarding style-based gameplay, and seamless upgrades and monetization. Led the full project, implementing custom drift physics, track design, monetization, and optimization for smooth play on all Android devices.",
-  image: "public/assets/Images/Projects/CarDriftRacing/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/CarDriftRacing/ProjectIcon.jpg",
   category: "Racing",
   technologies: ["Unity 3D", "C#", "Scriptable Objects", "Unity Ads"],
   links: {
@@ -341,13 +341,13 @@ export const games: Game[] = [
     "Optimized for low-end Android devices"
   ],
   screenshots: [
-    "public/assets/Images/Projects/CarDriftRacing/Screenshot_1.jpg",
-    "public/assets/Images/Projects/CarDriftRacing/Screenshot_2.jpg",
-    "public/assets/Images/Projects/CarDriftRacing/Screenshot_3.jpg",
-    "public/assets/Images/Projects/CarDriftRacing/Screenshot_4.jpg",
-    "public/assets/Images/Projects/CarDriftRacing/Screenshot_5.jpg",
-    "public/assets/Images/Projects/CarDriftRacing/Screenshot_6.jpg",
-    "public/assets/Images/Projects/CarDriftRacing/Screenshot_7.jpg"
+    "/assets/Images/Projects/CarDriftRacing/Screenshot_1.jpg",
+    "/assets/Images/Projects/CarDriftRacing/Screenshot_2.jpg",
+    "/assets/Images/Projects/CarDriftRacing/Screenshot_3.jpg",
+    "/assets/Images/Projects/CarDriftRacing/Screenshot_4.jpg",
+    "/assets/Images/Projects/CarDriftRacing/Screenshot_5.jpg",
+    "/assets/Images/Projects/CarDriftRacing/Screenshot_6.jpg",
+    "/assets/Images/Projects/CarDriftRacing/Screenshot_7.jpg"
   ]
 },
 {
@@ -355,7 +355,7 @@ export const games: Game[] = [
   title: "Fortune Funnel VR",
   description: "Physics-based VR puzzle game with funnels, gravity, and haptic feedback.",
   longDescription: "Solve dynamic physics puzzles by guiding objects through interactive funnels, ramps, and traps in VR. Fortune Funnel VR blends tactile object handling with puzzle-solving in a uniquely satisfying, immersive environment built for Oculus Quest. Developed and optimized full VR puzzle gameplay, including gesture-based object handling, real-time physics, modular level design, and immersive feedback systems.",
-  image: "public/assets/Images/Projects/FortuneFunnelVR/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/FortuneFunnelVR/ProjectIcon.jpg",
   category: "VR Puzzle",
   technologies: ["Unity 3D", "C#", "Oculus SDK", "Scriptable Objects"],
   links: {
@@ -386,7 +386,7 @@ export const games: Game[] = [
   title: "Hop Ball",
   description: "Endless arcade game with bouncing rhythm-based mechanics.",
   longDescription: "Control a bouncing ball as it hops across pillars in this visually vibrant and highly addictive arcade game. Swipe to guide the ball, maintain momentum, collect skins, and set high scores across dynamic and ever-changing environments. Developed full game loop, endless procedural generation, collectible skins, and integrated IAP and ads for a polished mobile experience.",
-  image: "public/assets/Images/Projects/HopBall/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/HopBall/ProjectIcon.jpg",
   category: "Arcade",
   technologies: ["Unity 3D", "C#", "Unity Ads", "Scriptable Objects"],
   links: {
@@ -409,14 +409,14 @@ export const games: Game[] = [
     "Optimized for casual play and mobile performance"
   ],
   screenshots: [
-    "public/assets/Images/Projects/HopBall/Screenshot_1.jpg",
-    "public/assets/Images/Projects/HopBall/Screenshot_2.jpg",
-    "public/assets/Images/Projects/HopBall/Screenshot_3.jpg",
-    "public/assets/Images/Projects/HopBall/Screenshot_4.jpg",
-    "public/assets/Images/Projects/HopBall/Screenshot_5.jpg",
-    "public/assets/Images/Projects/HopBall/Screenshot_6.jpg",
-    "public/assets/Images/Projects/HopBall/Screenshot_7.jpg",
-    "public/assets/Images/Projects/HopBall/Screenshot_8.jpg"
+    "/assets/Images/Projects/HopBall/Screenshot_1.jpg",
+    "/assets/Images/Projects/HopBall/Screenshot_2.jpg",
+    "/assets/Images/Projects/HopBall/Screenshot_3.jpg",
+    "/assets/Images/Projects/HopBall/Screenshot_4.jpg",
+    "/assets/Images/Projects/HopBall/Screenshot_5.jpg",
+    "/assets/Images/Projects/HopBall/Screenshot_6.jpg",
+    "/assets/Images/Projects/HopBall/Screenshot_7.jpg",
+    "/assets/Images/Projects/HopBall/Screenshot_8.jpg"
   ]
 },
 {
@@ -424,7 +424,7 @@ export const games: Game[] = [
   title: "Nut Color Sort",
   description: "Satisfying puzzle game to sort nuts by color and type.",
   longDescription: "Relax and challenge your brain in this colorful sorting puzzle. Tap to move nuts across branches and organize them by type. Plan your moves carefully and unwind with smooth visuals and satisfying animations across hundreds of handcrafted levels. Developed end-to-end with stack and color-match mechanics, modular level system, monetization, and polished UX.",
-  image: "public/assets/Images/Projects/NutColorSort/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/NutColorSort/ProjectIcon.jpg",
   category: "Puzzle",
   technologies: ["Unity 3D", "C#", "Scriptable Objects", "Unity Ads"],
   links: {
@@ -447,12 +447,12 @@ export const games: Game[] = [
     "Dynamic difficulty and daily challenges"
   ],
   screenshots: [
-    "public/assets/Images/Projects/NutColorSort/Screenshot_1.jpg",
-    "public/assets/Images/Projects/NutColorSort/Screenshot_2.jpg",
-    "public/assets/Images/Projects/NutColorSort/Screenshot_3.jpg",
-    "public/assets/Images/Projects/NutColorSort/Screenshot_4.jpg",
-    "public/assets/Images/Projects/NutColorSort/Screenshot_5.jpg",
-    "public/assets/Images/Projects/NutColorSort/Screenshot_6.jpg"
+    "/assets/Images/Projects/NutColorSort/Screenshot_1.jpg",
+    "/assets/Images/Projects/NutColorSort/Screenshot_2.jpg",
+    "/assets/Images/Projects/NutColorSort/Screenshot_3.jpg",
+    "/assets/Images/Projects/NutColorSort/Screenshot_4.jpg",
+    "/assets/Images/Projects/NutColorSort/Screenshot_5.jpg",
+    "/assets/Images/Projects/NutColorSort/Screenshot_6.jpg"
   ]
 },
 {
@@ -460,7 +460,7 @@ export const games: Game[] = [
   title: "Offroad Driving",
   description: "Realistic off-road driving game with dynamic terrain physics.",
   longDescription: "Experience extreme terrain driving with realistic vehicle physics and immersive environments. Choose from a range of vehicles and conquer hills, mud, water, and rough roads. Explore open landscapes and push your off-road skills to the limit. Led all development, including dynamic physics, vehicle systems, environments, progression, monetization, and mobile optimization.",
-  image: "public/assets/Images/Projects/OffroadDriving/ProjectIcon.jpg",
+  image: "/assets/Images/Projects/OffroadDriving/ProjectIcon.jpg",
   category: "Simulation",
   technologies: ["Unity 3D", "C#", "Scriptable Objects", "Unity Ads"],
   links: {
@@ -483,12 +483,12 @@ export const games: Game[] = [
     "Optimized for smooth mobile performance"
   ],
   screenshots: [
-    "public/assets/Images/Projects/OffroadDriving/Screenshot_1.jpg",
-    "public/assets/Images/Projects/OffroadDriving/Screenshot_2.jpg",
-    "public/assets/Images/Projects/OffroadDriving/Screenshot_3.jpg",
-    "public/assets/Images/Projects/OffroadDriving/Screenshot_4.jpg",
-    "public/assets/Images/Projects/OffroadDriving/Screenshot_5.jpg",
-    "public/assets/Images/Projects/OffroadDriving/Screenshot_6.jpg"
+    "/assets/Images/Projects/OffroadDriving/Screenshot_1.jpg",
+    "/assets/Images/Projects/OffroadDriving/Screenshot_2.jpg",
+    "/assets/Images/Projects/OffroadDriving/Screenshot_3.jpg",
+    "/assets/Images/Projects/OffroadDriving/Screenshot_4.jpg",
+    "/assets/Images/Projects/OffroadDriving/Screenshot_5.jpg",
+    "/assets/Images/Projects/OffroadDriving/Screenshot_6.jpg"
   ]
 }
 
