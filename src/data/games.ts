@@ -1,3 +1,13 @@
+export interface Contribution {
+  id: string;
+  module: string;
+  name: string;
+  image?: string;
+  shortDescription: string;
+  fullDescription: string;
+  bulletPoints: string[];
+}
+
 export interface Game {
   id: number;
   title: string;
@@ -19,6 +29,7 @@ export interface Game {
   rating: string;
   features: string[];
   screenshots: string[];
+  contributions?: Contribution[];
 }
 
 export const games: Game[] = [

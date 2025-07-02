@@ -7,6 +7,7 @@ import { ExternalLink, Github, Play, Calendar, Users, Award, Youtube } from "luc
 import { Game } from "@/data/games";
 import ScreenshotGallery from './ScreenshotGallery';
 import YouTubeVideo from './YouTubeVideo';
+import ProjectContributions from './ProjectContributions';
 
 interface GameModalProps {
   game: Game | null;
@@ -95,6 +96,9 @@ const GameModal = ({ game, isOpen, onClose }: GameModalProps) => {
               </p>
             </div>
           )}
+
+          {/* Contributions Section */}
+          <ProjectContributions contributions={game.contributions} />
 
           {/* Technologies */}
           {hasValidArray(game.technologies) && (
