@@ -1,73 +1,45 @@
-# Welcome to your Lovable project
+# Game Dev Online Gallery
 
-## Project info
+The gallery is a React/TypeScript site for showcasing Unity game projects.
 
-**URL**: https://lovable.dev/projects/1022a2f4-0615-4a26-9346-d0d4d198931c
+## Purpose
 
-## How can I edit this code?
+The gallery highlights Unity projects built by the developer. Each entry showcases features, screenshots and contributions so visitors can quickly explore past work.
 
-There are several ways of editing your application.
 
-**Use Lovable**
+## Setup
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1022a2f4-0615-4a26-9346-d0d4d198931c) and start prompting.
+1. Install [Node.js](https://nodejs.org/) and npm.
+2. Clone this repository and install dependencies:
+   ```bash
+   git clone <repo_url>
+   cd game-dev-online-gallery
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   The app will be available at `http://localhost:5173` by default.
 
-Changes made via Lovable will be committed automatically to this repo.
+To create a production build run `npm run build` and preview it locally with `npm run preview`. Use `npm run lint` to check code style.
 
-**Use your preferred IDE**
+## Contributing
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Contributions are welcome! To propose a change:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Fork this repository and create a feature branch.
+2. Make your changes and run `npm run lint` to ensure formatting.
+3. Open a pull request describing your changes.
 
-Follow these steps:
+## Running Locally
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+After installing dependencies, use `npm run dev` to launch the local dev server with hot reloading. The project uses Vite so changes are reflected instantly.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Technology Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
+- React and TypeScript
 - Vite
-- TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- shadcn-ui component library
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1022a2f4-0615-4a26-9346-d0d4d198931c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
