@@ -3,7 +3,6 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, Play } from "lucide-react";
 import { Game } from "@/data/games";
 
 interface GameCardProps {
@@ -64,16 +63,16 @@ const GameCard = ({ game, onGameClick }: GameCardProps) => {
           </div>
         </div>
         
-        <div className="flex gap-2" onClick={(e) => e.stopPropagation()}>
-          <Button size="sm" className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
-            <Play className="h-4 w-4 mr-1" />
-            Demo
-          </Button>
-          <Button size="sm" variant="outline" className="hover:bg-gray-50">
-            <Github className="h-4 w-4" />
-          </Button>
-          <Button size="sm" variant="outline" className="hover:bg-gray-50">
-            <ExternalLink className="h-4 w-4" />
+        <div className="mt-4">
+          <Button 
+            size="sm" 
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+            onClick={(e) => {
+              e.stopPropagation();
+              onGameClick(game);
+            }}
+          >
+            View Details
           </Button>
         </div>
       </CardContent>
