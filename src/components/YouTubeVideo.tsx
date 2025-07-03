@@ -27,9 +27,9 @@ const YouTubeVideo = ({ videoUrl }: YouTubeVideoProps) => {
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}`;
 
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <h3 className="text-lg font-semibold mb-3">Video Showcase</h3>
-      <AspectRatio ratio={16/9} className="bg-gray-100 rounded-lg overflow-hidden">
+      <AspectRatio ratio={16/9} className="bg-gray-100 rounded-lg overflow-hidden w-full">
         <iframe
           src={embedUrl}
           title="YouTube video player"

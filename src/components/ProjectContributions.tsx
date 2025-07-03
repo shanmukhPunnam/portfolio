@@ -25,11 +25,11 @@ const ProjectContributions = ({ contributions }: ProjectContributionsProps) => {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 w-full overflow-hidden">
       <h3 className="text-lg font-semibold mb-4">My Contributions</h3>
       <div className="grid gap-4">
         {validContributions.map((contribution) => (
-          <Card key={contribution.id} className="overflow-hidden">
+          <Card key={contribution.id} className="overflow-hidden w-full">
             <div className="flex flex-col md:flex-row">
               {/* Contribution Image */}
               {contribution.image && contribution.image.trim() && (
@@ -43,26 +43,26 @@ const ProjectContributions = ({ contributions }: ProjectContributionsProps) => {
               )}
               
               {/* Content */}
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <CardHeader>
                   <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <Badge variant="outline" className="bg-blue-50 border-blue-200 text-blue-700">
+                    <Badge variant="outline" className="bg-blue-50 border-blue-200 text-blue-700 max-w-full truncate">
                       {contribution.module}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl text-slate-900">
+                  <CardTitle className="text-xl text-slate-900 break-words">
                     {contribution.name}
                   </CardTitle>
-                  <CardDescription className="text-gray-600">
+                  <CardDescription className="text-gray-600 break-words">
                     {contribution.shortDescription}
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent>
+                <CardContent className="min-w-0">
                   {/* Full Description */}
                   {contribution.fullDescription && contribution.fullDescription.trim() && (
                     <div className="mb-4">
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed break-words">
                         {contribution.fullDescription}
                       </p>
                     </div>
