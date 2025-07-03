@@ -98,14 +98,114 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px) scale(1)',
+					},
+					'50%': {
+						transform: 'translateY(-20px) scale(1.05)',
+					}
+				},
+				'float-slow': {
+					'0%, 100%': {
+						transform: 'translateY(0px) rotate(0deg)',
+					},
+					'50%': {
+						transform: 'translateY(-10px) rotate(5deg)',
+					}
+				},
+				'spin-slow': {
+					'0%': {
+						transform: 'rotate(0deg)',
+					},
+					'100%': {
+						transform: 'rotate(360deg)',
+					}
+				},
+				'spin-reverse-slow': {
+					'0%': {
+						transform: 'rotate(360deg)',
+					},
+					'100%': {
+						transform: 'rotate(0deg)',
+					}
+				},
+				'flow-right': {
+					'0%': {
+						transform: 'translateX(-100%)',
+						opacity: '0'
+					},
+					'50%': {
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateX(100%)',
+						opacity: '0'
+					}
+				},
+				'flow-left': {
+					'0%': {
+						transform: 'translateX(100%)',
+						opacity: '0'
+					},
+					'50%': {
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateX(-100%)',
+						opacity: '0'
+					}
+				},
+				'flow-down': {
+					'0%': {
+						transform: 'translateY(-100%)',
+						opacity: '0'
+					},
+					'50%': {
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateY(100%)',
+						opacity: '0'
+					}
+				},
+				'scroll-indicator': {
+					'0%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateY(12px)',
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out'
+				'fade-in': 'fade-in 0.6s ease-out',
+				'fade-in-up': 'fade-in-up 0.8s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'float-slow': 'float-slow 8s ease-in-out infinite',
+				'spin-slow': 'spin-slow 20s linear infinite',
+				'spin-reverse-slow': 'spin-reverse-slow 15s linear infinite',
+				'flow-right': 'flow-right 8s ease-in-out infinite',
+				'flow-left': 'flow-left 10s ease-in-out infinite',
+				'flow-down': 'flow-down 12s ease-in-out infinite',
+				'scroll-indicator': 'scroll-indicator 2s ease-in-out infinite'
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require("@tailwindcss/line-clamp")],
 } satisfies Config;
