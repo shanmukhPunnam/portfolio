@@ -5,6 +5,17 @@ import { Download, GamepadIcon, Code, Sparkles, ArrowRight, Play } from "lucide-
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [currentText, setCurrentText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  // Animated taglines
+  const taglines = [
+    "Creating immersive gaming experiences with cutting-edge technology",
+    "Turning creative visions into interactive realities",
+    "Building the future of gaming, one line of code at a time",
+    "Crafting worlds where imagination becomes playable reality"
+  ];
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -17,6 +28,32 @@ const Hero = () => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  // Typing animation effect
+  useEffect(() => {
+    const currentTagline = taglines[currentIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+    const pauseTime = isDeleting ? 1000 : 2000;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        if (currentText === currentTagline) {
+          setTimeout(() => setIsDeleting(true), pauseTime);
+        } else {
+          setCurrentText(currentTagline.substring(0, currentText.length + 1));
+        }
+      } else {
+        if (currentText === '') {
+          setIsDeleting(false);
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % taglines.length);
+        } else {
+          setCurrentText(currentText.substring(0, currentText.length - 1));
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timer);
+  }, [currentText, currentIndex, isDeleting, taglines]);
 
   const scrollToGames = () => {
     const gamesSection = document.getElementById('games');
@@ -109,11 +146,13 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            Creating immersive gaming experiences with cutting-edge technology.
-            <span className="block mt-2 text-gray-400">Turning creative visions into interactive realities.</span>
-          </p>
+          {/* Animated Subtitle */}
+          <div className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in-up h-16 flex items-center" style={{ animationDelay: '0.4s' }}>
+            <span className="relative">
+              {currentText}
+              <span className="animate-pulse text-cyan-400">|</span>
+            </span>
+          </div>
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
@@ -138,19 +177,39 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Social proof stats */}
-          <div className="flex flex-wrap justify-center lg:justify-start gap-8 mt-12 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">6+</div>
-              <div className="text-sm text-gray-400">Years Experience</div>
+          {/* Enhanced social proof stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+            <div className="text-center group">
+              <div className="relative">
+                <div className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text mb-2 transition-transform group-hover:scale-110">
+                  6+
+                </div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider">Years Experience</div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">15+</div>
-              <div className="text-sm text-gray-400">Projects Delivered</div>
+            <div className="text-center group">
+              <div className="relative">
+                <div className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text mb-2 transition-transform group-hover:scale-110">
+                  50+
+                </div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider">Projects Delivered</div>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-1">15+</div>
-              <div className="text-sm text-gray-400">Team Members Led</div>
+            <div className="text-center group">
+              <div className="relative">
+                <div className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text mb-2 transition-transform group-hover:scale-110">
+                  15+
+                </div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider">Team Members Led</div>
+              </div>
+            </div>
+            <div className="text-center group">
+              <div className="relative">
+                <div className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text mb-2 transition-transform group-hover:scale-110">
+                  1M+
+                </div>
+                <div className="text-sm text-gray-400 uppercase tracking-wider">Downloads</div>
+              </div>
             </div>
           </div>
         </div>
