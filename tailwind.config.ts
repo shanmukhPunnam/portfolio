@@ -189,6 +189,36 @@ export default {
 						transform: 'translateY(12px)',
 						opacity: '0'
 					}
+				},
+				'gradient-x': {
+					'0%, 100%': {
+						'background-size': '200% 200%',
+						'background-position': 'left center'
+					},
+					'50%': {
+						'background-size': '200% 200%',
+						'background-position': 'right center'
+					}
+				},
+				'gradient-y': {
+					'0%, 100%': {
+						'background-size': '200% 200%',
+						'background-position': 'center top'
+					},
+					'50%': {
+						'background-size': '200% 200%',
+						'background-position': 'center bottom'
+					}
+				},
+				'gradient-xy': {
+					'0%, 100%': {
+						'background-size': '400% 400%',
+						'background-position': 'left center'
+					},
+					'50%': {
+						'background-size': '200% 200%',
+						'background-position': 'right center'
+					}
 				}
 			},
 			animation: {
@@ -203,9 +233,12 @@ export default {
 				'flow-right': 'flow-right 8s ease-in-out infinite',
 				'flow-left': 'flow-left 10s ease-in-out infinite',
 				'flow-down': 'flow-down 12s ease-in-out infinite',
-				'scroll-indicator': 'scroll-indicator 2s ease-in-out infinite'
+				'scroll-indicator': 'scroll-indicator 2s ease-in-out infinite',
+				'gradient-x': 'gradient-x 15s ease infinite',
+				'gradient-y': 'gradient-y 15s ease infinite',
+				'gradient-xy': 'gradient-xy 15s ease infinite'
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate"), require("@tailwindcss/line-clamp")],
+	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
