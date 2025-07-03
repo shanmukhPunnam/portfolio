@@ -1,64 +1,62 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import ScrollAnimationWrapper from './ScrollAnimationWrapper';
-import { Code, Gamepad2, Smartphone, Monitor, Wrench, Globe, Shield, Cpu, Database, GitBranch, Mic, Coins, Bot, Palette, Languages, Settings, Package, Target, Headphones, Zap, Puzzle, TestTube } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Core Development Skills",
       skills: [
-        { name: "Unity3D", icon: <Package className="h-6 w-6" /> },
-        { name: "Unreal", icon: <Gamepad2 className="h-6 w-6" /> },
-        { name: "C#", icon: <Code className="h-6 w-6" /> },
-        { name: "Multiplayer", icon: <Globe className="h-6 w-6" /> },
-        { name: "Shaders", icon: <Zap className="h-6 w-6" /> },
-        { name: "Particles", icon: <Target className="h-6 w-6" /> },
-        { name: "Optimization", icon: <Cpu className="h-6 w-6" /> },
-        { name: "AI Agents", icon: <Bot className="h-6 w-6" /> },
-        { name: "UI/UX", icon: <Palette className="h-6 w-6" /> },
-        { name: "Localization", icon: <Languages className="h-6 w-6" /> },
-        { name: "Editor Tools", icon: <Settings className="h-6 w-6" /> },
-        { name: "Scriptables", icon: <Code className="h-6 w-6" /> },
-        { name: "Addressables", icon: <Package className="h-6 w-6" /> }
+        { name: "Unity3D", icon: <img src="/assets/Images/skills/unity.svg" alt="Unity3D" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Unreal", icon: <img src="/assets/Images/skills/unreal.svg" alt="Unreal" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "C#", icon: <img src="/assets/Images/skills/csharp.svg" alt="C#" className="h-8 w-8" /> },
+        { name: "Multiplayer", icon: <img src="/assets/Images/skills/multiplayer.svg" alt="Multiplayer" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Shaders", icon: <img src="/assets/Images/skills/shader.svg" alt="Shaders" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Particles", icon: <img src="/assets/Images/skills/particles.svg" alt="Particles" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Optimization", icon: <img src="/assets/Images/skills/performance.svg" alt="Optimization" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "AI Agents", icon: <img src="/assets/Images/skills/ai.svg" alt="AI Agents" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "UI/UX", icon: <img src="/assets/Images/skills/uiux.svg" alt="UI/UX" className="h-8 w-8" /> },
+        { name: "Localization", icon: <img src="/assets/Images/skills/localization.svg" alt="Localization" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Editor Tools", icon: <img src="/assets/Images/skills/editor.svg" alt="Editor Tools" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Scriptables", icon: <img src="/assets/Images/skills/scriptable.png" alt="Scriptables" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Addressables", icon: <img src="/assets/Images/skills/cloud.svg" alt="Addressables" className="h-8 w-8 filter brightness-0 invert" /> }
       ]
     },
     {
       title: "Tools & Services",
       skills: [
-        { name: "Photon", icon: <Globe className="h-6 w-6" /> },
-        { name: "Firebase", icon: <Database className="h-6 w-6" /> },
-        { name: "Unity Services", icon: <Wrench className="h-6 w-6" /> },
-        { name: "Git", icon: <GitBranch className="h-6 w-6" /> },
-        { name: "Voice Chat", icon: <Mic className="h-6 w-6" /> },
-        { name: "LiveOps", icon: <Shield className="h-6 w-6" /> },
-        { name: "Crypto", icon: <Coins className="h-6 w-6" /> },
-        { name: "NFT", icon: <Coins className="h-6 w-6" /> }
+        { name: "Photon", icon: <img src="/assets/Images/skills/photon.png" alt="Photon" className="h-8 w-8" /> },
+        { name: "Firebase", icon: <img src="/assets/Images/skills/firebase.svg" alt="Firebase" className="h-8 w-8" /> },
+        { name: "Unity Services", icon: <img src="/assets/Images/skills/cloud.svg" alt="Unity Services" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Git", icon: <img src="/assets/Images/skills/github.svg" alt="Git" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Voice Chat", icon: <img src="/assets/Images/skills/voice.svg" alt="Voice Chat" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "LiveOps", icon: <img src="/assets/Images/skills/liveOps.svg" alt="LiveOps" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Crypto", icon: <img src="/assets/Images/skills/crypto.svg" alt="Crypto" className="h-8 w-8" /> },
+        { name: "NFT", icon: <img src="/assets/Images/skills/nft.svg" alt="NFT" className="h-8 w-8" /> }
       ]
     },
     {
       title: "Target Platforms",
       skills: [
-        { name: "Android", icon: <Smartphone className="h-6 w-6" /> },
-        { name: "iOS", icon: <Smartphone className="h-6 w-6" /> },
-        { name: "WebGL", icon: <Globe className="h-6 w-6" /> },
-        { name: "PC", icon: <Monitor className="h-6 w-6" /> },
-        { name: "AR", icon: <Target className="h-6 w-6" /> },
-        { name: "VR", icon: <Headphones className="h-6 w-6" /> }
+        { name: "Android", icon: <img src="/assets/Images/skills/android.svg" alt="Android" className="h-8 w-8" /> },
+        { name: "iOS", icon: <img src="/assets/Images/skills/apple.svg" alt="iOS" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "WebGL", icon: <img src="/assets/Images/skills/webgl.svg" alt="WebGL" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "PC", icon: <img src="/assets/Images/skills/pc.svg" alt="PC" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "AR", icon: <img src="/assets/Images/skills/ar.svg" alt="AR" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "VR", icon: <img src="/assets/Images/skills/vr.svg" alt="VR" className="h-8 w-8 filter brightness-0 invert" /> }
       ]
     },
     {
       title: "Project Types",
       skills: [
-        { name: "Shooter", icon: <Target className="h-6 w-6" /> },
-        { name: "VR Sim", icon: <Headphones className="h-6 w-6" /> },
-        { name: "Editor Tool", icon: <Settings className="h-6 w-6" /> },
-        { name: "Casual Game", icon: <Gamepad2 className="h-6 w-6" /> },
-        { name: "AI Combat", icon: <Bot className="h-6 w-6" /> },
-        { name: "Puzzle Gen", icon: <Puzzle className="h-6 w-6" /> },
-        { name: "Perf Test", icon: <TestTube className="h-6 w-6" /> },
-        { name: "Simulator", icon: <Monitor className="h-6 w-6" /> }
+        { name: "Shooter", icon: <img src="/assets/Images/skills/shooter.svg" alt="Shooter" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "VR Sim", icon: <img src="/assets/Images/skills/oculus.svg" alt="VR Sim" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Editor Tool", icon: <img src="/assets/Images/skills/editor.svg" alt="Editor Tool" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Casual Game", icon: <img src="/assets/Images/skills/casual.webp" alt="Casual Game" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "AI Combat", icon: <img src="/assets/Images/skills/ai.svg" alt="AI Combat" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Puzzle Gen", icon: <img src="/assets/Images/skills/puzzle.svg" alt="Puzzle Gen" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Perf Test", icon: <img src="/assets/Images/skills/performance.svg" alt="Perf Test" className="h-8 w-8 filter brightness-0 invert" /> },
+        { name: "Simulator", icon: <img src="/assets/Images/skills/simulator.svg" alt="Simulator" className="h-8 w-8 filter brightness-0 invert" /> }
       ]
     }
   ];

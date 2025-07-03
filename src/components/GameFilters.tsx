@@ -6,12 +6,10 @@ import { categories } from "@/data/games";
 
 interface GameFiltersProps {
   selectedCategory: string;
-  showFeatured: boolean;
   onCategoryChange: (category: string) => void;
-  onFeaturedToggle: () => void;
 }
 
-const GameFilters = ({ selectedCategory, showFeatured, onCategoryChange, onFeaturedToggle }: GameFiltersProps) => {
+const GameFilters = ({ selectedCategory, onCategoryChange }: GameFiltersProps) => {
   return (
     <div className="flex flex-wrap justify-center gap-4 mb-12">
       <div className="flex items-center gap-2 mb-4">
@@ -35,18 +33,6 @@ const GameFilters = ({ selectedCategory, showFeatured, onCategoryChange, onFeatu
           </Button>
         ))}
       </div>
-      <Button
-        variant={showFeatured ? "default" : "outline"}
-        size="sm"
-        onClick={onFeaturedToggle}
-        className={`ml-4 transition-all duration-200 ${
-          showFeatured 
-            ? "bg-cyan-600 hover:bg-cyan-700" 
-            : "hover:bg-cyan-50 hover:border-cyan-300"
-        }`}
-      >
-        Featured Only
-      </Button>
     </div>
   );
 };

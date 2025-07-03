@@ -8,14 +8,12 @@ import { games, Game } from '@/data/games';
 
 const GameShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [showFeatured, setShowFeatured] = useState(false);
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredGames = games.filter(game => {
     const categoryMatch = selectedCategory === "All" || game.category === selectedCategory;
-    const featuredMatch = !showFeatured || game.featured;
-    return categoryMatch && featuredMatch;
+    return categoryMatch;
   });
 
   const handleGameClick = (game: Game) => {
@@ -29,7 +27,7 @@ const GameShowcase = () => {
   };
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section id="games" className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
         <ScrollAnimationWrapper animation="fadeUp">
           <div className="text-center mb-16">
@@ -45,9 +43,7 @@ const GameShowcase = () => {
         <ScrollAnimationWrapper animation="fadeUp" delay={0.2}>
           <GameFilters
             selectedCategory={selectedCategory}
-            showFeatured={showFeatured}
             onCategoryChange={setSelectedCategory}
-            onFeaturedToggle={() => setShowFeatured(!showFeatured)}
           />
         </ScrollAnimationWrapper>
 

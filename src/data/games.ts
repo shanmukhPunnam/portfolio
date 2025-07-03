@@ -441,7 +441,7 @@ export const games: Game[] = [
   description: "Multiplayer roulette game with gesture-based betting in VR.",
   longDescription: "Experience the thrill of live roulette in virtual reality. Place your bets with intuitive hand gestures, interact with a lifelike wheel, and enjoy multiplayer casino realism with voice chat, animated avatars, and physics-based chips—all in an immersive VR space. Developed core VR gameplay, hand-tracked betting gestures, multiplayer logic, and optimized for Oculus Quest performance.",
   image: "/assets/Images/Projects/RouletteWheelVR/ProjectIcon.jpg",
-  category: "VR Casino",
+  category: "VR",
   technologies: ["Unity 3D", "C#", "Oculus SDK", "Photon"],
   links: {
     demo: "",
@@ -515,7 +515,7 @@ export const games: Game[] = [
   description: "Web3 multiplayer PvP shooter with tokenized assets and crypto rewards.",
   longDescription: "Alpha Returns is a cutting-edge multiplayer PvP shooter that blends traditional FPS action with a full Web3 NFT economy. Built in Unity, it features scalable multiplayer with Photon, blockchain-backed inventory and NFT asset rewards, real-time analytics, hybrid economy (IAP + tokens), and high-end mobile optimization. As Lead Unity Developer, I architected the project, implemented gameplay, Web3 systems, technical standards, and led a cross-functional team from prototype to release.",
   image: "/assets/Images/Projects/AlphaReturns/ProjectIcon.jpg",
-  category: "Shooter / Web3",
+  category: "Shooter",
   technologies: ["Unity 3D", "C#", "Photon", "Web3", "Firebase", "NFT"],
   links: {
     demo: "",
@@ -763,7 +763,7 @@ export const games: Game[] = [
   description: "Physics-based VR puzzle game with funnels, gravity, and haptic feedback.",
   longDescription: "Solve dynamic physics puzzles by guiding objects through interactive funnels, ramps, and traps in VR. Fortune Funnel VR blends tactile object handling with puzzle-solving in a uniquely satisfying, immersive environment built for Oculus Quest. Developed and optimized full VR puzzle gameplay, including gesture-based object handling, real-time physics, modular level design, and immersive feedback systems.",
   image: "/assets/Images/Projects/FortuneFunnelVR/ProjectIcon.jpg",
-  category: "VR Puzzle",
+  category: "VR",
   technologies: ["Unity 3D", "C#", "Oculus SDK", "Scriptable Objects"],
   links: {
     demo: "",
@@ -1000,7 +1000,7 @@ export const games: Game[] = [
   description: "Realistic off-road driving game with dynamic terrain physics.",
   longDescription: "Experience extreme terrain driving with realistic vehicle physics and immersive environments. Choose from a range of vehicles and conquer hills, mud, water, and rough roads. Explore open landscapes and push your off-road skills to the limit. Led all development, including dynamic physics, vehicle systems, environments, progression, monetization, and mobile optimization.",
   image: "/assets/Images/Projects/OffroadDriving/ProjectIcon.jpg",
-  category: "Simulation",
+  category: "Racing",
   technologies: ["Unity 3D", "C#", "Scriptable Objects", "Unity Ads"],
   links: {
     demo: "",
@@ -1077,4 +1077,4 @@ export const games: Game[] = [
 
 ];
 
-export const categories = ["All", "VR", "Shooter", "Puzzle", "Platformer", "Arcade", "Racing", "Simulation", "VR Casino", "VR Puzzle", "Shooter / Web3"];
+export const categories = ["All", "VR", "Shooter", "Puzzle", "Platformer", "Arcade", "Racing"];

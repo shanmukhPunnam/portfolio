@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Heart, ArrowUp, Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Heart, ArrowUp, Linkedin, Mail, Download, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -18,10 +18,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Github className="h-4 w-4" />, href: "https://github.com", label: "GitHub" },
-    { icon: <Linkedin className="h-4 w-4" />, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: <Twitter className="h-4 w-4" />, href: "https://twitter.com", label: "Twitter" },
-    { icon: <Mail className="h-4 w-4" />, href: "mailto:john.developer@email.com", label: "Email" }
+    { icon: <Linkedin className="h-4 w-4" />, href: "https://www.linkedin.com/in/shanmukha-jagadeesh-punnam/", label: "LinkedIn" },
+    { icon: <Mail className="h-4 w-4" />, href: "mailto:shanmukhajagadeesh@gmail.com", label: "Email" },
+    { icon: <Download className="h-4 w-4" />, href: "/assets/ShanmukaJagadeesh_Resume.pdf", label: "Resume" },
+    { icon: <MessageCircle className="h-4 w-4" />, href: "https://wa.me/918008900943", label: "WhatsApp" }
   ];
 
   return (
@@ -34,30 +34,12 @@ const Footer = () => {
             <div className="md:col-span-2">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Unity Game Developer
+                  Shanmuka Jagadeesh
                 </h3>
                 <p className="text-gray-400 mt-2 max-w-md">
-                  Creating immersive gaming experiences with passion, creativity, and cutting-edge technology. 
+                  Unity Game Developer creating immersive gaming experiences with passion, creativity, and cutting-edge technology. 
                   Let's build the next generation of games together.
                 </p>
-              </div>
-              
-              {/* Newsletter */}
-              <div className="bg-slate-800/50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Stay Updated</h4>
-                <p className="text-sm text-gray-400 mb-3">
-                  Get notified about new game releases and development insights.
-                </p>
-                <div className="flex gap-2">
-                  <input 
-                    type="email" 
-                    placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 bg-slate-700 border border-slate-600 rounded text-sm focus:outline-none focus:border-purple-500"
-                  />
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-700">
-                    Subscribe
-                  </Button>
-                </div>
               </div>
             </div>
 
@@ -82,10 +64,10 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="space-y-3">
                 <p className="text-gray-400 text-sm">
-                  San Francisco, CA
+                  Hyderabad, India
                 </p>
                 <p className="text-gray-400 text-sm">
-                  john.developer@email.com
+                  shanmukhajagadeesh@gmail.com
                 </p>
                 
                 <div className="flex gap-2 pt-2">
@@ -112,7 +94,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 text-sm text-gray-400">
-            <span>© 2024 Unity Game Developer. Made with</span>
+            <span>© 2025 Shanmuka Jagadeesh. Made with</span>
             <Heart className="h-4 w-4 text-red-500 fill-current" />
             <span>and lots of coffee ☕</span>
           </div>

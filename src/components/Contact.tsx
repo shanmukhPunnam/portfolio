@@ -1,78 +1,75 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import ScrollAnimationWrapper from './ScrollAnimationWrapper';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Download, MessageCircle, Copy, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const [copiedEmail, setCopiedEmail] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const copyEmailToClipboard = async (e: React.MouseEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    try {
+      await navigator.clipboard.writeText("shanmukhajagadeesh@gmail.com");
+      setCopiedEmail(true);
+      toast({
+        title: "Email Copied!",
+        description: "Email address has been copied to your clipboard.",
+      });
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } catch (err) {
+      toast({
+        title: "Copy Failed",
+        description: "Could not copy email to clipboard.",
+        variant: "destructive",
+      });
+    }
   };
 
   const contactInfo = [
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "john.developer@email.com",
-      href: "mailto:john.developer@email.com"
+      value: "shanmukhajagadeesh@gmail.com",
+      href: "mailto:shanmukhajagadeesh@gmail.com"
     },
     {
       icon: <Phone className="h-5 w-5" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 8008900943",
+      href: "tel:+918008900943"
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       label: "Location",
-      value: "San Francisco, CA",
-      href: "https://maps.google.com"
+      value: "Hyderabad, India",
+      href: "https://maps.google.com/search?q=Hyderabad,India"
     }
   ];
 
   const socialLinks = [
     {
-      icon: <Github className="h-5 w-5" />,
-      label: "GitHub",
-      href: "https://github.com",
-      color: "hover:text-gray-800"
-    },
-    {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn",
-      href: "https://linkedin.com",
-      color: "hover:text-blue-600"
+      href: "https://www.linkedin.com/in/shanmukha-jagadeesh-punnam/", // Your actual LinkedIn URL
+      color: "hover:text-blue-600",
+      description: "Connect with me professionally"
     },
     {
-      icon: <Twitter className="h-5 w-5" />,
-      label: "Twitter",
-      href: "https://twitter.com",
-      color: "hover:text-blue-400"
+      icon: <Download className="h-5 w-5" />,
+      label: "Resume/CV",
+      href: "/assets/ShanmukaJagadeesh_Resume.pdf", // Your resume download link
+      color: "hover:text-green-600",
+      description: "Download my latest resume"
+    },
+    {
+      icon: <MessageCircle className="h-5 w-5" />,
+      label: "WhatsApp",
+      href: "https://wa.me/918008900943", // WhatsApp link with your phone number
+      color: "hover:text-green-500",
+      description: "Message me directly"
     }
   ];
 
@@ -90,11 +87,11 @@ const Contact = () => {
           </div>
         </ScrollAnimationWrapper>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Contact Information */}
-          <div className="lg:col-span-1 space-y-6">
-            <ScrollAnimationWrapper animation="slideLeft" delay={0.2}>
-              <Card className="border-0 shadow-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl mx-auto">
+          {/* Contact Information - Wider */}
+          <div className="lg:col-span-5">
+            <ScrollAnimationWrapper animation="fadeUp" delay={0.2}>
+              <Card className="border-0 shadow-lg h-full">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold text-slate-900">
                     Get In Touch
@@ -102,159 +99,104 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {contactInfo.map((info, index) => (
-                    <a
-                      key={index}
-                      href={info.href}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
-                    >
-                      <div className="p-2 bg-purple-100 rounded-lg text-purple-600 group-hover:bg-purple-200 transition-colors">
-                        {info.icon}
-                      </div>
-                      <div>
-                        <p className="text-sm text-gray-500">{info.label}</p>
-                        <p className="font-medium text-slate-900">{info.value}</p>
-                      </div>
-                    </a>
+                    <div key={index} className="relative">
+                      <a
+                        href={info.href}
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      >
+                        <div className="p-2 bg-purple-100 rounded-lg text-purple-600 group-hover:bg-purple-200 transition-colors flex-shrink-0">
+                          {info.icon}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <p className="text-sm text-gray-500">{info.label}</p>
+                          <p className="font-medium text-slate-900 break-all text-sm">{info.value}</p>
+                        </div>
+                      </a>
+                      {info.label === "Email" && (
+                        <button
+                          onClick={copyEmailToClipboard}
+                          className="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 text-gray-400 hover:text-purple-600 transition-colors"
+                          title="Copy email address"
+                        >
+                          {copiedEmail ? (
+                            <Check className="h-4 w-4 text-green-500" />
+                          ) : (
+                            <Copy className="h-4 w-4" />
+                          )}
+                        </button>
+                      )}
+                    </div>
                   ))}
                 </CardContent>
               </Card>
             </ScrollAnimationWrapper>
+          </div>
 
-            {/* Social Links */}
-            <ScrollAnimationWrapper animation="slideLeft" delay={0.4}>
-              <Card className="border-0 shadow-lg">
+          {/* Social Links */}
+          <div className="lg:col-span-4">
+            <ScrollAnimationWrapper animation="fadeUp" delay={0.4}>
+              <Card className="border-0 shadow-lg h-full">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold text-slate-900">
-                    Follow Me
+                    Connect With Me
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex gap-4">
+                  <div className="flex flex-col gap-4">
                     {socialLinks.map((social, index) => (
                       <a
                         key={index}
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-200 hover:scale-110 ${social.color}`}
-                        title={social.label}
+                        className={`flex items-center gap-3 p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-200 hover:scale-105 ${social.color}`}
+                        title={social.description}
                       >
-                        {social.icon}
+                        <div className="p-2 bg-white rounded-lg shadow-sm">
+                          {social.icon}
+                        </div>
+                        <div className="flex-1">
+                          <span className="font-medium text-slate-900 block">{social.label}</span>
+                          <span className="text-xs text-gray-500">{social.description}</span>
+                        </div>
                       </a>
                     ))}
                   </div>
                 </CardContent>
               </Card>
             </ScrollAnimationWrapper>
-
-            {/* Availability */}
-            <ScrollAnimationWrapper animation="slideLeft" delay={0.6}>
-              <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-50 to-pink-50">
-                <CardContent className="p-6">
-                  <div className="text-center">
-                    <Badge className="bg-green-500 hover:bg-green-600 text-white mb-3">
-                      Available for Projects
-                    </Badge>
-                    <p className="text-sm text-gray-600">
-                      Currently accepting new freelance and full-time opportunities
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimationWrapper>
           </div>
 
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <ScrollAnimationWrapper animation="slideRight" delay={0.3}>
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-slate-900">
-                    Send a Message
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium text-gray-700">
-                          Full Name *
-                        </label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          placeholder="Your name"
-                          required
-                          className="focus:ring-purple-500 focus:border-purple-500"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium text-gray-700">
-                          Email Address *
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          placeholder="your@email.com"
-                          required
-                          className="focus:ring-purple-500 focus:border-purple-500"
-                        />
+          {/* Availability & Additional Info */}
+          <div className="lg:col-span-3">
+            <ScrollAnimationWrapper animation="fadeUp" delay={0.6}>
+              <div className="space-y-6">
+                <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-50 to-pink-50">
+                  <CardContent className="p-6">
+                    <div className="text-center">
+                      <Badge className="bg-green-500 hover:bg-green-600 text-white mb-3">
+                        Available for Projects
+                      </Badge>
+                      <p className="text-sm text-gray-600">
+                        Currently accepting new freelance and full-time opportunities
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card className="border-0 shadow-lg">
+                  <CardContent className="p-6">
+                    <div className="text-center">
+                      <h3 className="font-bold text-slate-900 mb-2">Response Time</h3>
+                      <p className="text-sm text-gray-600 mb-2">Usually within 24 hours</p>
+                      <div className="text-xs text-gray-500">
+                        Best times to reach me:<br/>
+                        Monday - Friday, 9 AM - 6 PM IST
                       </div>
                     </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium text-gray-700">
-                        Subject *
-                      </label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        placeholder="What's this about?"
-                        required
-                        className="focus:ring-purple-500 focus:border-purple-500"
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium text-gray-700">
-                        Message *
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder="Tell me about your project or idea..."
-                        rows={6}
-                        required
-                        className="focus:ring-purple-500 focus:border-purple-500"
-                      />
-                    </div>
-                    
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white transition-all duration-300 hover:scale-105"
-                    >
-                      <Send className="mr-2 h-5 w-5" />
-                      Send Message
-                    </Button>
-                  </form>
-                  
-                  <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-600 text-center">
-                      💡 <strong>Pro tip:</strong> Include details about your project scope, timeline, and budget for a faster response!
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </div>
             </ScrollAnimationWrapper>
           </div>
         </div>

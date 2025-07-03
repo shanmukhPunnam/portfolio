@@ -3,6 +3,21 @@ import { Button } from "@/components/ui/button";
 import { Download, GamepadIcon, Code, Sparkles } from "lucide-react";
 
 const Hero = () => {
+  const scrollToGames = () => {
+    const gamesSection = document.getElementById('games');
+    if (gamesSection) {
+      gamesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/ShanmukaJagadeesh_Resume.pdf';
+    link.download = 'ShanmukaJagadeesh_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className="relative min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated background blobs */}
@@ -33,11 +48,20 @@ const Hero = () => {
             Creating immersive gaming experiences with cutting-edge technology
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <Button 
+              size="lg" 
+              onClick={scrollToGames}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
               <GamepadIcon className="mr-2 h-5 w-5" />
               View My Games
             </Button>
-            <Button variant="outline" size="lg" className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              onClick={downloadResume}
+              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+            >
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </Button>
@@ -49,7 +73,7 @@ const Hero = () => {
           <div className="relative group">
             {/* Glowing gradient ring */}
             <div className="absolute -inset-2 md:-inset-4 rounded-full opacity-70 blur-lg bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 group-hover:opacity-100 transition"></div>
-            <div className="w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 p-1 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 relative z-10">
+            <div className="w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-transparent p-1 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 relative z-10">
               <img 
                 src="/lovable-uploads/6da09970-af62-4896-a766-e3213dca4258.png" 
                 alt="Unity Game Developer" 
