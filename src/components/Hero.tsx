@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Download, GamepadIcon, Code, Sparkles, ArrowRight, Play, Calendar, Trophy, Users, Star } from "lucide-react";
+import { Download, GamepadIcon, Code, Sparkles, ArrowRight, Calendar, Trophy, Users, Star } from "lucide-react";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -56,19 +56,27 @@ const Hero = () => {
   }, [currentText, currentIndex, isDeleting, taglines]);
 
   const scrollToGames = () => {
-    const gamesSection = document.getElementById('games');
-    if (gamesSection) {
-      gamesSection.scrollIntoView({ behavior: 'smooth' });
+    try {
+      const gamesSection = document.getElementById('games');
+      if (gamesSection) {
+        gamesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } catch (error) {
+      console.error('Error scrolling to games section:', error);
     }
   };
 
   const downloadResume = () => {
-    const link = document.createElement('a');
-    link.href = '/assets/ShanmukaJagadeesh_Resume.pdf';
-    link.download = 'ShanmukaJagadeesh_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      const link = document.createElement('a');
+      link.href = '/assets/ShanmukaJagadeesh_Resume.pdf';
+      link.download = 'ShanmukaJagadeesh_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+    }
   };
 
   return (
@@ -237,6 +245,12 @@ const Hero = () => {
                 src="/lovable-uploads/6da09970-af62-4896-a766-e3213dca4258.png" 
                 alt="Shanmuka Jagadeesh - Unity Game Developer" 
                 className="w-full h-full object-cover rounded-full relative z-10 transition-transform duration-500 group-hover:scale-110"
+                onError={(e) => {
+                  console.error('Image failed to load:', e);
+                  // Fallback to a default placeholder or hide the image
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
               />
             </div>
 
@@ -249,12 +263,16 @@ const Hero = () => {
 
       {/* Scroll indicator - improved mobile positioning */}
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <div className="flex flex-col items-center gap-1 sm:gap-2 text-gray-400 hover:text-white transition-colors cursor-pointer" onClick={scrollToGames}>
+        <button 
+          onClick={scrollToGames}
+          className="flex flex-col items-center gap-1 sm:gap-2 text-gray-400 hover:text-white transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 rounded-lg p-2"
+          aria-label="Scroll to explore games section"
+        >
           <span className="text-xs sm:text-sm">Scroll to explore</span>
           <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-gray-400 rounded-full p-1 flex items-start">
             <div className="w-1 h-2 sm:h-3 bg-gray-400 rounded-full mx-auto animate-scroll-indicator" />
           </div>
-        </div>
+        </button>
       </div>
     </section>
   );
