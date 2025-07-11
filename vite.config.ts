@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -11,8 +12,14 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: 'docs',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
-  base: './',
+  base: mode === 'production' ? '/portfolio/' : './',
   plugins: [
     react(),
     mode === 'development' &&
@@ -23,4 +30,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  publicDir: 'public',
 }));
