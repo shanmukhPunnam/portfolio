@@ -29,6 +29,12 @@ jobs:
       env:
         NODE_ENV: production
         
+    - name: Copy dist to docs
+      run: |
+        rm -rf docs/*
+        cp -r dist/* docs/
+        echo "" > docs/.nojekyll
+        
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3

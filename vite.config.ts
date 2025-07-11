@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   build: {
-    outDir: 'docs',
+    outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
       output: {
@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
-  base: mode === 'production' ? '/portfolio/' : './',
+  base: mode === 'production' ? '/portfolio/' : '/',
   plugins: [
     react(),
     mode === 'development' &&
