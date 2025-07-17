@@ -34,9 +34,12 @@ jobs:
         
     - name: Copy dist to docs
       run: |
-        rm -rf docs/*
+        rm -rf docs/* || true
         cp -r dist/* docs/
         echo "" > docs/.nojekyll
+        
+    - name: List docs directory
+      run: ls -la docs/
         
     - name: Commit and push changes
       if: github.ref == 'refs/heads/main'

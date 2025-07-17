@@ -246,10 +246,16 @@ const Hero = () => {
                 alt="Shanmuka Jagadeesh - Unity Game Developer" 
                 className="w-full h-full object-cover rounded-full relative z-10 transition-transform duration-500 group-hover:scale-110"
                 onError={(e) => {
-                  console.error('Image failed to load:', e);
-                  // Fallback to a default placeholder or hide the image
+                  console.warn('Profile image failed to load, using fallback');
                   const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
+                  target.src = "/assets/Images/Profile/ProfilePicture.png";
+                  target.onerror = () => {
+                    // If fallback also fails, hide the image gracefully
+                    target.style.opacity = '0';
+                  };
+                }}
+                onLoad={() => {
+                  console.log('Profile image loaded successfully');
                 }}
               />
             </div>

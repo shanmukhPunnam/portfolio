@@ -15,6 +15,20 @@
   }
 }
 
+/* Global styles for smooth scrolling and animations */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure images load gracefully */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[src=""], img:not([src]) {
+  opacity: 0;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
