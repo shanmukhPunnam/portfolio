@@ -50,19 +50,23 @@ import { offroadDriving } from './games/offroadDriving';
 
 // Export all games as a consolidated array
 export const games: Game[] = [
-  pokerVR,
-  zombieFever,
+  
+  alphaReturns,
   warGround,
+
+  pokerVR,
+  rouletteWheelVR,
+  fortuneFunnelVR,
+
   wordCoach,
   worldOfRabin,
-  rouletteWheelVR,
-  alphaReturns,
+  zombieFever,
   arrowTwist,
   carDriftRacing,
-  fortuneFunnelVR,
   hopBall,
-  nutColorSort,
-  offroadDriving
+  offroadDriving,
+
+  nutColorSort
 ];
 
 export const categories = ["All", "VR", "Shooter", "Puzzle", "Platformer", "Arcade", "Racing"];
