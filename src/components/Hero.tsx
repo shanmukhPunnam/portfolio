@@ -217,17 +217,6 @@ const Hero = () => {
                 <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Team Members Led</div>
               </div>
             </div>
-            <div className="text-center group">
-              <div className="relative">
-                <div className="flex items-center justify-center mb-2">
-                  <Star className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 mr-2" />
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text transition-transform group-hover:scale-110">
-                    1M+
-                  </div>
-                </div>
-                <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Downloads</div>
-              </div>
-            </div>
           </div>
         </div>
 
