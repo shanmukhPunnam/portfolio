@@ -189,7 +189,7 @@ const Hero = () => {
                 <div className="flex items-center justify-center mb-2">
                   <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mr-2" />
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text transition-transform group-hover:scale-110">
-                    6+
+                    8
                   </div>
                 </div>
                 <div className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Years Experience</div>
